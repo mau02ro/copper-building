@@ -1,0 +1,70 @@
+body {
+  background-color: bisque;
+}
+
+#hd {
+}
+#hd .hd__main {
+  background: #ffffff;
+}
+#hd .hd__wrapper {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 113px;
+}
+
+#hd__btnMenu {
+  background: #ffffff;
+  border: none;
+  display: flex;
+  align-items: baseline;
+  margin-left: 53px;
+  cursor: pointer;
+}
+#hd__btnMenu span {
+  color: #566263;
+  padding-left: 22px;
+  font-family: "Bell MT", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 33px;
+}
+
+#hd__logo {
+  width: 295.5px;
+  height: 58px;
+  margin: 0 0 0 147px;
+}
+
+.hd__contact {
+  display: flex;
+  align-items: baseline;
+}
+.hd__contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hd__contact .hd__contact-item:last-child {
+  margin-left: 38px;
+}
+.hd__contact-icon {
+  height: 45px;
+  padding-top: 3px;
+}
+.hd__contact-icon * {
+  width: 35px;
+  height: 35px;
+}
+.hd__contact-text {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #566263;
+  text-decoration: none;
+}
