@@ -115,6 +115,11 @@ body {
   left: 0;
   width: 300px;
   display: none;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+#hd__menu::-webkit-scrollbar {
+  display: none;
 }
 .hd__menu-btnConatiner {
   background: #ffffff;
