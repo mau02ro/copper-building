@@ -32,6 +32,9 @@ html {
 /* ====================== */
 /* Header */
 /* ====================== */
+#hd ul {
+  list-style: none;
+}
 #hd {
   background: #ffffff;
   position: sticky;
