@@ -1,3 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+}
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 #ft {
   height: 298px;
   padding: 49px 20px 30px;
@@ -5,7 +23,7 @@
 }
 .ft__wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 395px 340px 350px;
   max-width: 1071px;
   margin: 0 auto;
   width: 95%;
@@ -25,23 +43,18 @@
   left: -10px;
   margin-top: 15px;
 }
-
 .ft__column-two {
   list-style: none;
-  padding-left: 39px;
 }
 .ft__column-two li {
-  margin-bottom: 19px;
-}
-.ft__column-three {
-  padding-left: 21px;
+  margin-bottom: 15.5px;
 }
 .ft__text {
   color: #bfd1cb;
   font-family: "Open Sans", Sans-serif;
   font-size: 18px;
   font-weight: 400;
-  line-height: 3px;
+  line-height: 6px;
   padding: 5px 0;
   display: block;
   text-decoration: none;
@@ -49,10 +62,18 @@
 .ft__text a {
   text-decoration: none;
   color: #bfd1cb;
-  margin-left: 10px;
+  margin-left: 5px;
+}
+.ft__column-two {
+  position: relative;
+  top: -2px;
+}
+.ft__column-three {
+  position: relative;
+  top: -9px;
 }
 .ft__column-three .ft__text {
-  line-height: 23px;
+  line-height: 25px;
   margin-bottom: 0;
   padding: 0;
 }
@@ -61,10 +82,13 @@
 }
 .ft__column-three .ft__text:first-child {
   width: 200px;
-  margin-bottom: 25px;
+  margin-bottom: 29px;
 }
 .ft__column-three .ft__text:last-child {
-  margin-top: 15px;
+  margin-top: 10px;
+}
+.ft__column-three .ft__text:last-child a {
+  margin: 0;
 }
 .ft__column-three .ft__text:first-child span {
   display: block;
