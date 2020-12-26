@@ -1,20 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
+@font-face {
+  font-family: "Bell MT";
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
+  src: url("http://copperbuilddev.wpengine.com/wp-content/uploads/2020/11/bell-mt-fett.ttf")
+    format("truetype");
+}
+
 body {
+  padding: 0;
+  margin: 0;
+  font-family: "Bell MT";
   background-color: bisque;
 }
+
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /* ====================== */
 /* ====================== */
 /* Header */
 /* ====================== */
 #hd {
   background: #ffffff;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
-#hd .hd__main {
-  width: 95%;
-  margin: 0 auto;
+.hd__main {
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+}
+.hd__container-openMenu,
+.hd__container-logo,
+.hd__container-phone,
+.hd__container-email {
   height: 102px;
+  display: flex;
+  align-items: center;
+}
+.hd__container-openMenu {
+  width: 25%;
+  padding-left: 80px;
+}
+.hd__container-logo {
+  width: 52.941%;
+  padding: 25px 0;
+  text-align: center;
+  display: block;
+}
+.hd__container-phone {
+  width: 11.581%;
+}
+.hd__container-email {
+  width: 10.409%;
+  padding: 10px 30px 10px 10px;
 }
 
 /* ====================== */
@@ -44,7 +96,9 @@ body {
   text-transform: uppercase;
   line-height: 33px;
 }
-
+.hd__btnMenu {
+  cursor: pointer;
+}
 /* ====================== */
 /* ====================== */
 /* Header Logo*/
@@ -52,25 +106,19 @@ body {
 #hd__logo {
   width: 266px;
   height: 52px;
-  margin-left: 132px;
 }
 
 /* ====================== */
 /* ====================== */
 /* Header Contact*/
 /* ====================== */
-.hd__contact {
+.hd__contact-wrapper {
   display: flex;
-  align-items: baseline;
-  padding-right: 17px;
-}
-.hd__contact-item {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-}
-.hd__contact .hd__contact-item:last-child {
-  margin-left: 33px;
+  justify-content: center;
+  flex-flow: column;
+  width: 100%;
+  height: 100%;
 }
 .hd__contact-text {
   font-family: "Open Sans", Sans-serif;
@@ -92,6 +140,92 @@ body {
 /* ====================== */
 /* Header Menu*/
 /* ====================== */
+#hd__menu {
+  display: none;
+  background: #566263;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+#hd__menu::-webkit-scrollbar {
+  display: none;
+}
+.hd__menu-text {
+  color: #566263;
+  font-family: "Bell MT", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-top: 14px;
+}
+/* ====================== */
+/* Header Menu Header*/
+.hd__menu-btnContainer {
+  width: 100%;
+  height: 102px;
+  background-color: #ffffff;
+  position: relative;
+}
+#hd__menu-btn {
+  display: flex;
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+  cursor: pointer;
+}
+
+/* ====================== */
+/* Header Menu Main*/
+.hd__menu-main {
+  padding: 20px 0 0 10px;
+}
+.hd__menu-itemTitle {
+  display: block;
+  font-family: "Bell MT", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+  color: #bfd1cb;
+  text-decoration: none;
+  padding: 15px;
+  cursor: pointer;
+}
+.hd__subMenu {
+  display: none;
+  list-style: none;
+}
+.hd__subMenu-item {
+  display: block;
+  font-family: "Bell MT", sans-serif;
+  font-weight: 600;
+  padding: 15px;
+  font-size: 17px;
+  line-height: 1;
+  color: #bfd1cb;
+  text-decoration: none;
+  padding-left: 35px !important;
+  background: url(http://copperbuilddev.wpengine.com/wp-content/uploads/2020/12/flecha-apunta-a-la-derecha.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  position: relative;
+}
+.hd__subMenu-item:hover,
+.hd__menu-itemTitle:hover {
+  background-color: #657879;
+}
+.hd__menu-itemTitle i {
+  font-size: 14px;
+}
+.hd__hover {
+  background-color: #657879;
+}
+.hd__hover i {
+  transform: rotateZ(-180deg);
+}
+
 .hd__OpenMenu {
   display: block !important;
 }
@@ -108,105 +242,43 @@ body {
   }
 }
 
-#hd__menu {
-  background-color: #566263;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 300px;
-  display: none;
-  max-height: 100vh;
-  overflow-y: scroll;
-}
-#hd__menu::-webkit-scrollbar {
-  display: none;
-}
-.hd__menu-btnConatiner {
-  background: #ffffff;
-  height: 106px;
-  position: relative;
-}
-#hd__menu-btn {
-  display: flex;
-  position: absolute;
-  bottom: 15px;
-  left: 40px;
-  cursor: pointer;
-}
-.hd__menu-text {
-  color: #566263;
-  font-family: "Bell MT", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  text-transform: uppercase;
-  padding-top: 14px;
-}
-
-.hd__menu-main {
-  list-style: none;
-  padding: 20px 0 20px 10px;
-}
-
-.hd__menu-itemTitle {
-  display: block;
-  font-family: "Bell MT", sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 20px;
-  color: #bfd1cb;
-  text-decoration: none;
-}
-.hd__subMenu {
-  display: none;
-  list-style: none;
-}
-.hd__subMenu-item {
-  font-family: "Bell MT", sans-serif;
-  font-weight: 600;
-  font-size: 17px;
-  line-height: 1;
-  color: #bfd1cb;
-  text-decoration: none;
-  padding-left: 35px !important;
-  background: url(http://copperbuilddev.wpengine.com/wp-content/uploads/2020/12/flecha-apunta-a-la-derecha.png);
-  background-repeat: no-repeat;
-  vertical-align: central;
-  background-position: left;
-  position: relative;
-}
-.hd__menu-itemTitle,
-.hd__subMenu-item {
-  padding: 15px;
-  display: block;
-}
-.hd__subMenu-item:hover,
-.hd__menu-itemTitle:hover {
-  background-color: #657879;
-}
-.hd__menu-itemTitle i {
-  font-size: 14px;
-}
-.hd__hover {
-  background-color: #657879;
-}
-.hd__hover i {
-  transform: rotateZ(-180deg);
+.hd__menu-item:last-child {
+  margin-top: 10px;
 }
 .hd__menu-itenIcon {
   display: block;
   color: #bfd1cb;
-  padding: 5px 10px;
+  padding: 10px 20px 15px;
   text-decoration: none;
   font-size: 17px;
 }
+.hd__menu-itenIcon .fas {
+  font-size: 20px;
+}
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1024px) {
+  .hd__container-openMenu {
+    padding-left: 20px;
+  }
+  .hd__container-logo {
+    width: 48%;
+  }
+  .hd__container-phone {
+    width: 17%;
+  }
+  .hd__container-email {
+    width: 15%;
+  }
   /* ====================== */
   /* ====================== */
   /* Header Logo*/
   /* ====================== */
+  .hd__container-logo {
+    width: 48%;
+  }
   #hd__logo {
-    margin-left: 50px;
+    width: 160px;
+    height: 36px;
   }
   /* ====================== */
   /* ====================== */
@@ -220,116 +292,61 @@ body {
   /* ====================== */
   /* Header Contact*/
   /* ====================== */
+  .hd__container-email {
+    padding: 10px 15px 10px 10px;
+  }
   .hd__contact-text {
     font-size: 16px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  /* ====================== */
-  /* ====================== */
-  /* Header */
-  /* ====================== */
-  #hd .hd__wrapper {
+  .hd__container-openMenu,
+  .hd__container-logo,
+  .hd__container-phone,
+  .hd__container-email {
     height: 53px;
   }
-
+  .hd__container-logo {
+    padding: 17px 0;
+  }
+  .hd__btnMenu-iconWrapper svg {
+    width: 20px;
+    height: 24px;
+  }
+  .hd__btnMenu-text {
+    font-size: 15px;
+    padding-left: 15px;
+  }
+  .hd__container-openMenu {
+    padding-top: 12px;
+  }
   /* ====================== */
   /* ====================== */
   /* Header Logo*/
   /* ====================== */
   #hd__logo {
     width: 100px;
-    height: 30px;
-    margin-left: 100px;
+    height: 20px;
   }
-  /* ====================== */
-  /* ====================== */
-  /* Header BTN Menu*/
-  /* ====================== */
-  #hd__btnMenu {
-    margin-left: 0;
-  }
-  .hd__btnMenu-text {
-    font-size: 15px;
-  }
-  .hd__btnMenu-iconWrapper svg {
-    width: 20px;
-    height: 24px;
-  }
-
   /* ====================== */
   /* ====================== */
   /* Header Contact*/
   /* ====================== */
+  .hd__container-phone,
+  .hd__container-email {
+    padding-top: 13px;
+  }
   .hd__contact-text {
     display: none;
   }
-  .hd__contact-icon {
-    height: auto;
-    margin: 0 40px;
-  }
   .hd__contact-icon * {
-    width: 18px;
-    height: 18px;
-  }
-  .hd__contact .hd__contact-item:last-child .hd__contact-icon * {
-    width: 22px;
-    height: 22px;
-  }
-
-  /* ====================== */
-  /* ====================== */
-  /* Header Menu*/
-  /* ====================== */
-  #hd__menu {
-    width: 360px;
+    width: 20px;
+    height: 20px;
   }
 }
 
-@media screen and (max-width: 660px) {
-  /* ====================== */
-  /* ====================== */
-  /* Header Logo*/
-  /* ====================== */
-  #hd__logo {
-    margin-left: 50px;
-  }
-
-  /* ====================== */
-  /* ====================== */
-  /* Header Contact*/
-  /* ====================== */
-  .hd__contact-icon {
-    margin: 0 20px;
-  }
-}
-
-@media screen and (max-width: 460px) {
-  #hd__btnMenu {
-    margin-left: 12px;
-  }
-  /* ====================== */
-  /* ====================== */
-  /* Header Logo*/
-  /* ====================== */
-  #hd__logo {
-    margin-left: 0;
-  }
-
-  /* ====================== */
-  /* ====================== */
-  /* Header Contact*/
-  /* ====================== */
-  .hd__contact {
-    margin-left: 15px;
-  }
-  .hd__contact-icon {
-    margin: 0;
-  }
-  .hd__contact .hd__contact-item:last-child {
-    margin-left: 20px;
-  }
+@media screen and (max-width: 420px) {
   /* ====================== */
   /* ====================== */
   /* Header Menu*/

@@ -1,7 +1,7 @@
 window.addEventListener("resize", () => {
   hd_Reset();
 });
-$("#hd__btnMenu").click(() => {
+$(".hd__btnMenu").click(() => {
   $("#hd__menu").addClass("hd__OpenMenu");
 });
 $("#hd__menu-btn").click(() => {
