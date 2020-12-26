@@ -1,12 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
 
-@font-face {
+/* @font-face {
   font-family: "Bell MT";
   font-style: normal;
   font-weight: normal;
   font-display: auto;
   src: url("http://copperbuilddev.wpengine.com/wp-content/uploads/2020/11/bell-mt-fett.ttf")
     format("truetype");
+} */
+@font-face {
+  font-family: "Bell MT";
+  src: url("http://db.onlinewebfonts.com/t/ab49b5908f0919134482d8934cca5ec8.eot"); /* IE9*/
+  src: url("http://db.onlinewebfonts.com/t/ab49b5908f0919134482d8934cca5ec8.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */
+      url("http://db.onlinewebfonts.com/t/ab49b5908f0919134482d8934cca5ec8.woff2")
+      format("woff2"),
+    /* chrome firefox */
+      url("http://db.onlinewebfonts.com/t/ab49b5908f0919134482d8934cca5ec8.woff")
+      format("woff"),
+    /* chrome firefox */
+      url("http://db.onlinewebfonts.com/t/ab49b5908f0919134482d8934cca5ec8.ttf")
+      format("truetype"),
+    /* chrome firefox opera Safari, Android, iOS 4.2+*/
+      url("http://db.onlinewebfonts.com/t/ab49b5908f0919134482d8934cca5ec8.svg#Bell")
+      format("svg"); /* iOS 4.1- */
 }
 
 body {
