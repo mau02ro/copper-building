@@ -9,6 +9,7 @@
   src: url("https://f.hubspotusercontent40.net/hubfs/8362842/identity/fonts/bell-mt-fett.ttf")
     format("truetype");
 }
+
 /* Cambio */
 
 body {
@@ -39,6 +40,7 @@ html {
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 10000;
 }
 #hd ul {
   list-style: none;
@@ -161,6 +163,7 @@ html {
   display: none;
   background: #566263;
   position: fixed;
+  z-index: 20000;
   top: 0;
   left: 0;
   width: 300px;
