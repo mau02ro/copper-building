@@ -49,6 +49,7 @@ html {
   background: #ffffff;
   height: 102px;
   position: fixed;
+  z-index: 1000000;
   top: 0;
   left: 0;
   right: 0;
@@ -168,7 +169,7 @@ html {
   display: none;
   background: #566263;
   position: fixed;
-  z-index: 20000;
+  z-index: 2000000;
   top: 0;
   left: 0;
   width: 300px;
@@ -209,7 +210,7 @@ html {
 }
 .hd__menu-itemTitle {
   display: block;
-  font-family: "Bell", sans-serif;
+  font-family: "Bell MT", sans-serif;
   font-weight: 600;
   font-size: 20px;
   line-height: 20px;
@@ -225,7 +226,7 @@ html {
 }
 .hd__subMenu-item {
   display: block;
-  font-family: "Bell", sans-serif;
+  font-family: "Bell MT", sans-serif;
   font-weight: 600;
   padding: 15px;
   font-size: 17px;
@@ -283,6 +284,10 @@ html {
   text-decoration: none;
   font-size: 17px;
 }
+.hd__menu-itenIcon:hover {
+  color: #bfd1cb !important;
+  text-decoration: none !important;
+}
 .hd__menu-itenIcon .fas {
   font-size: 20px;
 }
@@ -308,8 +313,8 @@ html {
     width: 48%;
   }
   #hd__logo {
-    width: 160px;
-    height: 36px;
+    width: 200px;
+    height: 40px;
   }
   /* ====================== */
   /* ====================== */
@@ -331,11 +336,13 @@ html {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .hd__container-openMenu,
   .hd__container-logo,
   .hd__container-phone,
-  .hd__container-email {
+  .hd__container-email,
+  .box-header,
+  #hd {
     height: 53px;
   }
   .hd__container-logo {
