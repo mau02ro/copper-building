@@ -1,3 +1,16 @@
+window.addEventListener("load", () => {
+  let element = $("#hd")[0];
+  let aux;
+
+  while (element.nodeName !== "BODY") {
+    aux = element;
+
+    element = element.parentNode;
+  }
+
+  aux.classList.add("hd__sticky");
+});
+
 window.addEventListener("resize", () => {
   hd_Reset();
 });

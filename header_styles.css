@@ -1,13 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+/* Cambio */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
 
 @font-face {
   font-family: "Bell MT";
   font-style: normal;
   font-weight: normal;
   font-display: auto;
-  src: url("https://copperbuilddev.wpengine.com/wp-content/uploads/2020/11/bell-mt-fett.ttf")
+  src: url("https://f.hubspotusercontent40.net/hubfs/8362842/identity/fonts/bell-mt-fett.ttf")
     format("truetype");
 }
+/* Cambio */
 
 body {
   padding: 0;
@@ -32,15 +34,20 @@ html {
 /* ====================== */
 /* Header */
 /* ====================== */
-#hd ul {
-  list-style: none;
-}
-#hd {
-  background: #ffffff;
+/* Cambio */
+.hd__sticky {
   position: sticky;
   top: 0;
   left: 0;
 }
+#hd ul {
+  list-style: none;
+  padding-inline-start: 0 !important;
+}
+#hd {
+  background: #ffffff;
+}
+/* Cambio */
 .hd__main {
   width: 100%;
   display: flex;
@@ -131,6 +138,13 @@ html {
   color: #566263;
   text-decoration: none;
 }
+/* cambio */
+.hd__contact-text:hover {
+  text-decoration: none;
+  color: #566263;
+}
+/* cambio */
+
 .hd__contact-icon {
   height: 40px;
 }
