@@ -43,13 +43,13 @@ html {
   line-height: 6px;
   padding: 5px 0;
   display: block;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 /* cambio */
 .ft__text:hover {
   color: #bfd1cb;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 /* cambio */
 
@@ -94,14 +94,11 @@ html {
   font-size: 13px;
   line-height: 1.5;
 }
-/* cambio */
-
-.ft__social-img,
-.ft__social-img img {
-  display: block;
-  width: 28px;
-  height: 28px;
+.ft__social-icon:hover {
+  color: #ffffff !important;
+  text-decoration: none;
 }
+/* cambio */
 
 /* ===================== */
 /* ===================== */
