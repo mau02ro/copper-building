@@ -1,14 +1,13 @@
 /* Cambio */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
 
-@font-face {
+/* @font-face {
   font-family: "Bell MT";
   font-style: normal;
   font-weight: normal;
   font-display: auto;
   src: url("https://f.hubspotusercontent40.net/hubfs/8362842/identity/fonts/bell-mt-fett.ttf")
     format("truetype");
-}
+} */
 
 /* Cambio */
 
@@ -21,7 +20,7 @@ body {
 
 html {
   box-sizing: border-box;
-  font-family: "Bell MT";
+  font-family: "Bell";
 }
 *,
 *:before,
@@ -36,17 +35,23 @@ html {
 /* Header */
 /* ====================== */
 /* Cambio */
-.hd__sticky {
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 10000;
+.box-header {
+  background: #ffffff;
+  height: 102px;
 }
 #hd ul {
   list-style: none;
-  padding-inline-start: 0 !important;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 #hd {
+  background: #ffffff;
+  height: 102px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background: #ffffff;
 }
 /* Cambio */
@@ -204,7 +209,7 @@ html {
 }
 .hd__menu-itemTitle {
   display: block;
-  font-family: "Bell MT", sans-serif;
+  font-family: "Bell", sans-serif;
   font-weight: 600;
   font-size: 20px;
   line-height: 20px;
@@ -213,13 +218,14 @@ html {
   padding: 15px;
   cursor: pointer;
 }
+
 .hd__subMenu {
   display: none;
   list-style: none;
 }
 .hd__subMenu-item {
   display: block;
-  font-family: "Bell MT", sans-serif;
+  font-family: "Bell", sans-serif;
   font-weight: 600;
   padding: 15px;
   font-size: 17px;
@@ -232,10 +238,15 @@ html {
   background-position: left;
   position: relative;
 }
+/* Cambio */
 .hd__subMenu-item:hover,
 .hd__menu-itemTitle:hover {
   background-color: #657879;
+  color: #bfd1cb;
+  text-decoration: none;
 }
+/* Cambio */
+
 .hd__menu-itemTitle i {
   font-size: 14px;
 }
