@@ -124,15 +124,30 @@ html {
   display: block;
 }
 
+/* cambio */
+@media screen and (max-width: 1160px) {
+  .ft__wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* cambio */
+
 @media screen and (max-width: 778px) {
   #ft {
     height: auto;
     padding: 49px 40px 30px;
     text-align: center;
   }
+  /* cambio */
   .ft__wrapper {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
+    width: 100%;
+  }
+  /* cambio */
+
+  .ft__bold {
+    display: block;
   }
 
   /* ===================== */
@@ -167,4 +182,10 @@ html {
   .ft__column-three {
     padding-left: 0;
   }
+
+  /* cambio */
+  .ft__column-three .ft__text:first-child {
+    width: auto;
+  }
+  /* cambio */
 }
