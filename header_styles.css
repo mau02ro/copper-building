@@ -219,6 +219,7 @@ html {
   padding: 15px;
   padding-right: 0 !important;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .hd__subMenu {
