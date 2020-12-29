@@ -217,6 +217,7 @@ html {
   color: #bfd1cb;
   text-decoration: none;
   padding: 15px;
+  padding-right: 0 !important;
   cursor: pointer;
 }
 
