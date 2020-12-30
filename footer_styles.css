@@ -96,6 +96,15 @@ html {
   color: #ffffff !important;
   text-decoration: none;
 }
+
+.ft__social-imgIcon {
+  width: 26px;
+  height: 26px;
+  background-color: transparent;
+  padding: 0;
+  border-radius: 50%;
+  background-color: #b09245;
+}
 /* cambio */
 
 /* ===================== */
